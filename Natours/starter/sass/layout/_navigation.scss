@@ -15,6 +15,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -29,8 +39,17 @@
       $color-primary-dark
     );
     z-index: 1000;
-
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -65,6 +84,7 @@
       display: inline-block;
       font-size: 3rem;
       font-weight: 300;
+      padding: 1rem 2rem;
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
@@ -91,7 +111,7 @@
     }
   }
 
-  // Functionality
+  //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
@@ -101,7 +121,7 @@
     width: 100%;
   }
 
-  // Icon
+  //ICON
   &__icon {
     position: relative;
     margin-top: 3.5rem;
